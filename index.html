@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ag-Grid full-featured example</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://unpkg.com/ag-grid-enterprise/dist/ag-grid-enterprise.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+
+    <script src="utils.js"></script>
+    <script src="customStatsToolPanel.js"></script>
+    <script src="excel.js"></script>
+    <script src="state.js"></script>
+    <script src="pivot.js"></script>
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <div style="padding-bottom: 5px">
+        <button onclick="getSelectedRows()">Get selected rows</button>
+        <button onclick="expandRussia()">Expand Russia</button>
+        <button onclick="expandAll()">Expand All</button>
+        <button onclick="collapseAll()">Collapse All</button>
+        <button onclick="onBtnExportDataAsExcel()">Export as Excel</button>
+    </div>
+    <div style="margin-bottom: 5px;">
+        <button onclick="saveState()">Save State</button>
+        <button onclick="restoreState()">Restore State</button>
+        <button onclick="printState()">Print State</button>
+        <button onclick="resetState()">Reset State</button>
+        <button onclick="togglePivotMode()">Toggle Pivot Mode</button>
+    </div>
+    <div id="myGrid" style="height: calc(100% - 50px); width: 100%;" class="ag-theme-balham"></div>
+</body>
+
+</html>
